@@ -4,7 +4,6 @@
 
     animation-name: title;
     animation-timing-function: linear;
-    animation-fill-mode: fowards;
 }
 
 @keyframes title {
