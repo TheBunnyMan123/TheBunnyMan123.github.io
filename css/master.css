@@ -9,12 +9,12 @@
 
 @keyframes title {
     0% {
-           transform: translateX(100%);
+           left:100%;
     }
     90% {
-           transform: translateX(40%);
+           left: 40%;
     }
     100% {
-           transform: translateX(45%);
+          left: 50%;
     }
 }
