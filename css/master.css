@@ -1,7 +1,7 @@
 .animation1 {
     animation-name: title;
     animation-duration: 3s;
-    left: unset;
+    position: relative;
 }
 
 @keyframes title {
