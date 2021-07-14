@@ -1,6 +1,7 @@
 .animation1 {
     animation-name: title;
     animation-duration: 3s;
+    text-align: center
     position: relative;
 }
 
@@ -12,6 +13,6 @@
            left:40%;
     }
     100% {
-        left:50%;
+        left:center;
     }
 }
