@@ -1,0 +1,18 @@
+.anim1 {
+    animation-name: title;
+    animation-duration: 4s;
+    transform: translateX(100%);
+    animation: title;
+}
+
+@keyframes title {
+    0% {
+        left: 120%;
+    }
+    90% {
+        left: 40%;
+    }
+    100% {
+        left: 50%;
+    }
+}
