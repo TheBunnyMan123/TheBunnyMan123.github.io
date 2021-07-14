@@ -2,7 +2,7 @@
     animation-name: title;
     animation-duration: 3s;
     position: relative;
-    left: center;
+    left: 40%;
 }
 
 @keyframes title {
