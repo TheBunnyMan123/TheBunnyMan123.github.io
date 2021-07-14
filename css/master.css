@@ -1,6 +1,6 @@
 .anim1 {
     animation-name: title;
-    animation-duration: 2.5s;
+    animation-duration: 3s;
 }
 
 @keyframes title {
