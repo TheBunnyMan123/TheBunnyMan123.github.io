@@ -2,7 +2,7 @@
     animation-name: title;
     animation-duration: 1s;
     transform: translateX(100%);
-    animation: title;
+    animation-name: title;
     animation-timing-function: linear;
     animation-fill-mode: fowards;
 }
