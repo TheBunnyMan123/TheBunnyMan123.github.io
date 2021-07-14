@@ -6,15 +6,15 @@
 
 @keyframes title {
     0% {
-           translateX(100%);
+           left:100%;
     }
     80% {
-           translateX(40%);
+           left:40%;
     }
     90% {
-          translateX(55%);
+          left:55%;
     }
     100% {
-        translateX(50%);
+        left:50%;
     }
 }
