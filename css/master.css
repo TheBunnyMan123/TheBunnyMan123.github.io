@@ -1,7 +1,7 @@
 .anim1 {
     animation-name: title;
     animation-duration: 1s;
-    transform: translateX(100%);
+
     animation-name: title;
     animation-timing-function: linear;
     animation-fill-mode: fowards;
@@ -9,12 +9,12 @@
 
 @keyframes title {
     0% {
-        left: 100%;
+           transform: translateX(100%);
     }
     90% {
-        left: 40%;
+           transform: translateX(40%);
     }
     100% {
-        left: 50%;
+           transform: translateX(45%);
     }
 }
