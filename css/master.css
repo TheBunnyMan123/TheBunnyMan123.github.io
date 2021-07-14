@@ -3,6 +3,7 @@
     animation-duration: 1s;
     transform: translateX(100%);
     animation: title;
+    animation-timing-function: linear;
 }
 
 @keyframes title {
