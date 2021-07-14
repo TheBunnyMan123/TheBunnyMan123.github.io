@@ -2,7 +2,7 @@
     animation-name: title;
     animation-duration: 3s;
     text-align: center;
-    left: unset;
+    left: center;
 }
 
 @keyframes title {
@@ -13,9 +13,9 @@
            left:40%;
     }
     90% {
-          left:55%;
+          left:51%;
     }
     100% {
-        left:50%;
+        left:center;
     }
 }
