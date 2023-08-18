@@ -11,11 +11,28 @@
             function run() {
                 let embedLink = window.open();
                 embedLink.document.head.innerHTML = `
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&display=swap" rel="stylesheet">
                     <style>
                         * {
                             color: #F0F0F0;
                             background-color: #121212;
-                            font-family: sans-serif;
+                            font-family: 'Noto Sans', sans-serif;
+                            font-weight: 300;
+                        }
+                        button, input.border, select, video, iframe {
+                            border: 1px solid #F0F0F0;
+                        }
+                        select, input {
+                            margin-bottom: 4px;
+                        }
+                        p {
+                            font-size: 14px;
+                        }
+                        h2 {
+                            font-size: 26px;
+                            font-weight: 700;
                         }
                         hr {
                             margin-top: 10px;
@@ -75,13 +92,13 @@
                         <label for="video">Select a video file (supports MP4 and WEBM):&nbsp;&nbsp;</label>
                         <input type="file" id="video" name="video" accepts=".mp4 .webm"></input>
                         <br>
-                        <video controls style="border: 2px solid #f0f0f0" src="" id="videoPlayer" width="800px" height="450px"></video>
+                        <video controls src="" id="videoPlayer" width="800px" height="450px"></video>
                     </div>
                     <div id="youtubeDIV" class="tabContent">
-                        <input type="text" id="ytvideo" name="ytvideo"></input>
+                        <input class="border" type="text" id="ytvideo" name="ytvideo"></input>
                         <button id="loadYTVid" onclick="loadYTVideo()">Go!</button>
                         <br>
-                        <iframe allowfullscreen style="border: 2px solid #f0f0f0" src="" id="ytVideoPlayer" width="800px" height="450px"></iframe>
+                        <iframe allowfullscreen src="" id="ytVideoPlayer" width="400px" height="225px"></iframe>
                         <ul id="ytVideos">
                         </ul>
                     </div>
