@@ -2,12 +2,9 @@
     <h1>Please enable javascript</h1>
 </noscript>
 <h2>Welcome to A:B Injector</h2>
-<div class="tab">
-    <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'siteDIV')">Games / Websites</button>
-    <button class="tablinks" onclick="openTab(event, 'videoDIV')">Videos</button>
-    <button class="tablinks" onclick="openTab(event, 'youtubeDIV')">YouTube</button>
-</div>
 <hr>
+<br>
+
 <div id="siteDIV" class="tabContent">
     <select name="games" id="games" onchange="">
         <option value="">Select Game</option>
@@ -41,12 +38,26 @@
     <input id="customGame" type="text"></input>
     <button id="loadCustomGame" onclick="loadCustomGame()">Load custom URL</button>
 </div>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
 <div id="videoDIV" class="tabContent">
     <label for="video">Select a video file (supported formats depend on browser):&nbsp;&nbsp;</label>
     <input type="file" id="video" name="video" accepts=".mp4 .webm"></input>
     <br>
-    <video controls src="" id="videoPlayer" width="800px" height="450px"></video>
+    <video controls src="" id="videoPlayer" width="400px" height="225px"></video>
 </div>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
 <div id="youtubeDIV" class="tabContent">
     <input class="border" type="text" id="ytvideo" name="ytvideo"></input>
     <button id="loadYTVid" onclick="loadYTVideo()">Go!</button>

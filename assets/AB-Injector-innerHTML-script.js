@@ -5,10 +5,14 @@ function loadGame() {
     }
 }
 
+//alert("test");
+
 function loadCustomGame() {
     document.getElementById("gameFrame").src = document.getElementById("customGame").value;
     document.getElementById("openInNewTab").href = document.getElementById("customGame").value;
 }
+
+//alert("test");
 
 function loadVideo() {
     var media = URL.createObjectURL(this.files[0]);
@@ -17,26 +21,7 @@ function loadVideo() {
     vid.play();
 }
 
-function openTab(evt, tab) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = doc.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length;) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = doc.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length;) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tab).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+//alert("test");
 
 function loadYTVideo() {
     var url = document.getElementById("ytvideo").value;
@@ -50,14 +35,14 @@ function loadYTVideo() {
     localStorage.ytVideolist = document.getElementById("ytVideos").innerHTML;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("loadCustomGame").addEventListener("onclick", loadCustomGame);
-    document.getElementById("games").addEventListener("change", loadGame);
-    document.getElementById("video").addEventListener("change", loadVideo);
-    document.getElementById("ytVideos").innerHTML = localStorage.ytVideolist;
-    console.log(document.getElementById("ytVideos").innerHTML);
-    if (document.getElementById("ytVideos").innerHTML == "undefined") {
-        document.getElementById("ytVideos").innerHTML = "";
-    }
-    document.getElementById("defaultOpen"); //.click();
-});
+//alert("test");
+document.getElementById("loadCustomGame").addEventListener("onclick", loadCustomGame);
+document.getElementById("games").addEventListener("change", loadGame);
+document.getElementById("video").addEventListener("change", loadVideo);
+document.getElementById("ytVideos").innerHTML = localStorage.ytVideolist;
+console.log(document.getElementById("ytVideos").innerHTML);
+if (document.getElementById("ytVideos").innerHTML == "undefined") {
+    document.getElementById("ytVideos").innerHTML = "";
+}
+document.getElementById("defaultOpen"); //.click();
+//alert("test");
