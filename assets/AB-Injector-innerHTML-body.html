@@ -1,0 +1,56 @@
+<noscript>
+    <h1>Please enable javascript</h1>
+</noscript>
+<h2>Welcome to A:B Injector</h2>
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'siteDIV')">Games / Websites</button>
+    <button class="tablinks" onclick="openTab(event, 'videoDIV')">Videos</button>
+    <button class="tablinks" onclick="openTab(event, 'youtubeDIV')">YouTube</button>
+</div>
+<hr>
+<div id="siteDIV" class="tabContent">
+    <select name="games" id="games" onchange="">
+        <option value="">Select Game</option>
+        <option value="https://hextris.github.io/hextris">Hextris</option>
+        <option value="https://landgreen.github.io/sidescroller/">N-Gon</option>
+        <option value="https://ellisonleao.github.io/clumsy-bird/">Clumsy Bird</option>
+        <option value="https://lab.hakim.se/coil/">COIL</option>
+        <option value="https://scratch.mit.edu/projects/15200040/embed">Griffpatch's Tower Defense</option>
+        <option value="https://scratch.mit.edu/projects/10128407/embed">Paper Minecraft</option>
+        <option value="https://scratch.mit.edu/projects/868062768/embed">Switch</option>
+        <option value="https://jlam55555.github.io/pop-the-lock/">Pop the Lock</option>
+        <option value="https://scratch.mit.edu/projects/389464290/embed">Getting Over It (Scratch)</option>
+        <option value="https://scratch.mit.edu/projects/550043399/embed">Boomerang Kid</option>
+        <option value="https://scratch.mit.edu/projects/539747811/embed">Bionic Blitz</option>
+        <option value="https://scratch.mit.edu/projects/94880017/embed">Color Switch</option>
+        <option value="https://scratch.mit.edu/projects/604699802/embed">Kaboom Cavern</option>
+        <option value="https://kenrick95.github.io/c4/">Connect 4</option>
+        <option value="">-----</option>
+        <option value="https://www.google.com/webhp?igu=1">Google</option>
+        <option value="https://www.bing.com/">Bing</option>
+    </select>
+    <br>
+    <iframe allowfullscreen id="gameFrame" src="" width="816px" height="461px"></iframe>
+    <a rel="noopener" id="openInNewTab" target="_blank" href="">
+        <p>Open in new tab (will exist about:blank)</p>
+    </a>
+    <p>Be sure to give games a couple minutes to load!</p>
+
+    <label for="customGame">Custom URL:&nbsp;</label>
+    <input id="customGame" type="text"></input>
+    <button id="loadCustomGame" onclick="loadCustomGame()">Load custom URL</button>
+</div>
+<div id="videoDIV" class="tabContent">
+    <label for="video">Select a video file (supported formats depend on browser):&nbsp;&nbsp;</label>
+    <input type="file" id="video" name="video" accepts=".mp4 .webm"></input>
+    <br>
+    <video controls src="" id="videoPlayer" width="800px" height="450px"></video>
+</div>
+<div id="youtubeDIV" class="tabContent">
+    <input class="border" type="text" id="ytvideo" name="ytvideo"></input>
+    <button id="loadYTVid" onclick="loadYTVideo()">Go!</button>
+    <br>
+    <iframe allowfullscreen src="" id="ytVideoPlayer" width="400px" height="225px"></iframe>
+    <ul id="ytVideos">
+    </ul>
+</div>

@@ -1,180 +1,46 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>A:B Injector</title>
-    </head>
-    <body>
-        <p>Welcome to A:B Injector. To start click "Inject".
-            <br><button onClick="run()">Inject</button>
-        </p>
-        <script>
-            function run() {
-                let embedLink = window.open();
-                embedLink.document.head.innerHTML = `
-                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&display=swap" rel="stylesheet">
-                    <style>
-                        * {
-                            color: #F0F0F0;
-                            background-color: #121212;
-                            font-family: 'Noto Sans', sans-serif;
-                            font-weight: 300;
-                        }
-                        button, input.border, select, video, iframe {
-                            border: 1px solid #F0F0F0;
-                        }
-                        select, input {
-                            margin-bottom: 4px;
-                        }
-                        p {
-                            font-size: 14px;
-                        }
-                        h2 {
-                            font-size: 26px;
-                            font-weight: 700;
-                        }
-                        hr {
-                            margin-top: 10px;
-                            margin-bottom: 10px;
-                            margin-left: 1px;
-                            margin-right: 1px;
-                        }
 
-                        .tab {
-                            overflow: hidden;
-                            border: 1px solid #333333;
-                            background-color: #222222;
-                        }
+<head>
+    <title>A:B Injector</title>
+</head>
 
-                        .tab button {
-                            background-color: inherit;
-                            border: none;
-                            float: left;
-                            outline: none;
-                            cursor: pointer;
-                            padding: 14px 16px;
-                            transition: 0.3s;
-                        }
+<body>
+    <noscript>
+        <h1>THIS WEB APP *NEEDS* JAVASCRIPT TO BE ENABLED</h1>
+    </noscript>
+    <p>Welcome to A:B Injector. To start click "Inject".
+        <br><button onClick="run()">Inject</button>
+    </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p style="font-size:8pt">Sorry, but this needs to be run in a server of some kind</p>
+    <script>
+        function run() {
+            let embedLink = window.open();
 
-                        .tab button:hover {
-                            background-color: #444444;
-                        }
-                    </style>
-                    <title>A:B Injector - Hidden</title>
-                `
-                embedLink.document.body.innerHTML = `
-                    <noscript><h1>Please enable javascript</h1></noscript>
-                    <h2>Welcome to A:B Injector</h2>
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'siteDIV')">Games / Websites</button>
-                        <button class="tablinks" onclick="openTab(event, 'videoDIV')">Videos</button>
-                        <button class="tablinks" onclick="openTab(event, 'youtubeDIV')">YouTube</button>
-                    </div>
-                    <hr>
-                    <div id="siteDIV" class="tabContent">
-                        <select name="games" id="games" onchange="">
-                            <option value="">Select Game</option>
-                            <option value="https://hextris.github.io/hextris">Hextris</option>
-                            <option value="https://landgreen.github.io/sidescroller/">N-Gon</option>
-                            <option value-"https://basicallydan.github.io/skifree.js/">Skifree</option>
-                            <option value="https://ellisonleao.github.io/clumsy-bird/">Clumsy Bird</option>
-                            <option value="https://lab.hakim.se/coil/">COIL</option>
-                            <option value="https://ondras.github.io/custom-tetris/">Tetris</option>
-                            <option value="">-----</option>
-                            <option value="https://www.google.com/webhp?igu=1">Google</option>
-                            <option value="https://www.bing.com/">Bing</option>
-                        </select>
-                        <br>
-                        <iframe id="gameFrame" src="" width="816px" height="461px"></iframe>
-                    </div>
-                    <div id="videoDIV" class="tabContent">
-                        <label for="video">Select a video file (supports MP4 and WEBM):&nbsp;&nbsp;</label>
-                        <input type="file" id="video" name="video" accepts=".mp4 .webm"></input>
-                        <br>
-                        <video controls src="" id="videoPlayer" width="800px" height="450px"></video>
-                    </div>
-                    <div id="youtubeDIV" class="tabContent">
-                        <input class="border" type="text" id="ytvideo" name="ytvideo"></input>
-                        <button id="loadYTVid" onclick="loadYTVideo()">Go!</button>
-                        <br>
-                        <iframe allowfullscreen src="" id="ytVideoPlayer" width="400px" height="225px"></iframe>
-                        <ul id="ytVideos">
-                        </ul>
-                    </div>
-                `;
+            // Set body in about:blank from local file AB-Injector-innerHTML-body.html
+            fetch("/assets/AB-Injector-innerHTML-body.html")
+                .then(response => response.text())
+                .then(txt => embedLink.document.body.innerHTML = txt);
 
-                var script = embedLink.document.createElement("script");
-                script.text = `
-                    function loadGame() {
-                        if (document.getElementById("games").value != "") {
-                            document.getElementById("gameFrame").innerHTML = "";
-                            document.getElementById("gameFrame").src = document.getElementById("games").value;
-                        }
-                    }
+            // Set head in about:blank from local file AB-Injector-innerHTML-head.html
+            fetch("/assets/AB-Injector-innerHTML-head.html")
+                .then(response => response.text())
+                .then(txt => embedLink.document.head.innerHTML = txt);
 
-                    function loadVideo() {
-                        var media = URL.createObjectURL(this.files[0]);
-                        var vid = document.getElementById("videoPlayer");
-                        vid.src = media;
-                        vid.play();
-                    }
+            // Set main script in about:blank from local file AB-Injector-innerHTML-script.js
+            var script = embedLink.document.createElement("script");
+            var scriptText;
 
-                    document.getElementById("games").addEventListener("change", loadGame)
-                    document.getElementById("video").addEventListener("change", loadVideo)
+            fetch("/assets/AB-Injector-innerHTML-script.js")
+                .then(response => response.text())
+                .then(txt => {
+                    var script = embedLink.document.createElement("script");
+                    script.innerHTML = txt;
+                    embedLink.document.body.appendChild(script);
+                });
+        }
+    </script>
+</body>
 
-                    function openTab(evt, tab) {
-                        // Declare all variables
-                        var i, tabcontent, tablinks;
-
-                        // Get all elements with class="tabcontent" and hide them
-                        tabcontent = document.getElementsByClassName("tabcontent");
-                        for (i = 0; i < tabcontent.length; i++) {
-                            tabcontent[i].style.display = "none";
-                        }
-
-                        // Get all elements with class="tablinks" and remove the class "active"
-                        tablinks = document.getElementsByClassName("tablinks");
-                        for (i = 0; i < tablinks.length; i++) {
-                            tablinks[i].className = tablinks[i].className.replace(" active", "");
-                        }
-
-                        // Show the current tab, and add an "active" class to the button that opened the tab
-                        document.getElementById(tab).style.display = "block";
-                        evt.currentTarget.className += " active";
-                    } 
-
-                    tabcontent = document.getElementsByClassName("tabcontent");
-                    for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
-                    }
-
-                    function loadYTVideo() {
-                        var url = document.getElementById("ytvideo").value;
-                        var tempId = url.split("?v=")[1];
-                        var id = tempId.split("&")[0];
-
-                        document.getElementById("ytVideoPlayer").src = "http://www.youtube.com/embed/" + id;
-
-                        var list = document.getElementById("ytVideos").innerHTML;
-                        document.getElementById("ytVideos").innerHTML = list + "<li>"+document.getElementById("ytvideo").value+"</li>";
-                        localStorage.ytVideolist = document.getElementById("ytVideos").innerHTML;
-                    }
-
-                    try {
-                        document.getElementById("ytVideos").innerHTML = localStorage.ytVideolist; 
-                        console.log(document.getElementById("ytVideos").innerHTML);
-                        if (document.getElementById("ytVideos").innerHTML == "undefined") {
-                            document.getElementById("ytVideos").innerHTML = "";
-                        }
-                    }catch {
-                        console.log("No localstorage found");
-                    }
-                `;
-
-                embedLink.document.body.appendChild(script);
-
-            }
-        </script>
-    </body>
 </html>
