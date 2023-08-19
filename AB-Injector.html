@@ -15,6 +15,36 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <p style="font-size:8pt">Sorry, but this needs to be run in a server of some kind</p>
     <script>
+        // function run() {
+        //     let embedLink = window.open();
+
+        //     // Set body in about:blank from local file AB-Injector-innerHTML-body.html
+        //     fetch("/assets/AB-Injector-innerHTML-body.html")
+        //         .then(response => response.text())
+        //         .then(txt => embedLink.document.body.innerHTML = txt);
+
+        //     // Set head in about:blank from local file AB-Injector-innerHTML-head.html
+        //     fetch("/assets/AB-Injector-innerHTML-head.html")
+        //         .then(response => response.text())
+        //         .then(txt => embedLink.document.head.innerHTML = txt);
+
+        //     // Set main script in about:blank from local file AB-Injector-innerHTML-script.js
+        //     var script = embedLink.document.createElement("script");
+        //     var scriptText;
+
+        //     setTimeout(fetch("/assets/AB-Injector-innerHTML-script.js")
+        //         .then(response => response.text())
+        //         .then(txt => {
+        //             console.log(txt)
+        //             var script = embedLink.document.createElement("script");
+        //             script.src = window.location.href.split("/")[0] + window.location.href.split("/")[1] + window.location.href.split("/")[2] + "/assets/AB-Injector-innerHTML-script.js";
+        //             console.log(script);
+        //             embedLink.document.head.appendChild(script);
+        //             console.log(embedLink.document.getElementsByTagName("script"));
+        //         }), 10)
+        // }
+
+
         function run() {
             let embedLink = window.open();
 
