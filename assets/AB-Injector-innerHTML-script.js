@@ -28,7 +28,7 @@ function loadYTVideo() {
     var tempId = url.split("?v=")[1];
     var id = tempId.split("&")[0];
 
-    document.getElementById("ytVideoPlayer").src = "http://www.youtube.com/embed/" + id;
+    document.getElementById("ytVideoPlayer").src = "https://www.youtube.com/embed/" + id;
 
     var list = document.getElementById("ytVideos").innerHTML;
     document.getElementById("ytVideos").innerHTML = list + "<li>" + document.getElementById("ytvideo").value + "</li>";
