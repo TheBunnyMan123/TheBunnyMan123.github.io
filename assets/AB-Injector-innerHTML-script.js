@@ -47,7 +47,9 @@ function loadYTVideo() {
 
 //alert("test");
 document.getElementById("loadCustomGame").addEventListener("onclick", loadCustomGame);
+document.getElementById("loadCustomFlashGame").addEventListener("onclick", loadCustomFlashGame);
 document.getElementById("games").addEventListener("change", loadGame);
+document.getElementById("flashGames").addEventListener("change", loadFlashGame);
 document.getElementById("video").addEventListener("change", loadVideo);
 document.getElementById("ytVideos").innerHTML = localStorage.ytVideolist;
 console.log(document.getElementById("ytVideos").innerHTML);
