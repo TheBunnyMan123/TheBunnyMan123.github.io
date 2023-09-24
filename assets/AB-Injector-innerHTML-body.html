@@ -40,6 +40,35 @@
     <button id="loadCustomGame" onclick="loadCustomGame()">Load custom URL</button>
 </div>
 
+<div id="flashDIV" class="tabContent">
+    <select name="flashGames" id="flashGames" onchange="">
+        <option value="">Select Game</option>
+        <option value="CatMario.swf">Cat Mario</option>
+        <option value="Impossible_Quiz_Deluxe_NG.swf">The Impossible Quiz</option>
+        <option value="The_Impossible_Quiz_2.swf">The Impossible Quiz 2</option>
+        <option value="impossiblequizbook.swf">The Impossible Quiz Book</option>
+        <option value="impossiblequizbook2.swf">The Impossible Quiz Book Chapter 2</option>
+        <option value="impossiblequizbook3.swf">The Impossible Quiz Book Chapter 3</option>
+        <option value="impossible-xmas.swf">The Impossible XMas</option>
+        <option value="riddle-school-1.swf">Riddle School 1</option>
+        <option value="riddle-school-2.swf">Riddle School 2</option>
+        <option value="riddle-school-3.swf">Riddle School 3</option>
+        <option value="riddle-school-4.swf">Riddle School 4</option>
+        <option value="riddle-school-5.swf">Riddle School 5</option>
+        <option value="riddle-transfer-1.swf">Riddle Transfer 1</option>
+        <option value="riddle-transfer-2.swf">Riddle Transfer 2</option>
+        <option value="the-worlds-hardest-game.swf">Worlds Hardest Game</option>
+        <option value="unfair_mario">Unfair Mario</option>
+    </select>
+    <br>
+    <embed id="flashGameFrame" src="" width="816px" height="461px"></embed>
+    <p>Be sure to give games a couple minutes to load!</p>
+
+    <label for="customFlashGame">Custom URL:&nbsp;</label>
+    <input id="customFlashGame" type="text"></input>
+    <button id="loadCustomGame" onclick="loadCustomFlashGame()">Load custom URL</button>
+</div>
+
 <br>
 <br>
 <hr>

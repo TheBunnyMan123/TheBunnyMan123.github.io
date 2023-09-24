@@ -5,11 +5,21 @@ function loadGame() {
     }
 }
 
+function loadFlashGame() {
+    if (document.getElementById("flashGames").value !== "") {
+        document.getElementById("flashGameFrame").src = "assets/flash/" + document.getElementById("flashGames").value;
+    }
+}
+
 //alert("test");
 
 function loadCustomGame() {
     document.getElementById("gameFrame").src = document.getElementById("customGame").value;
     document.getElementById("openInNewTab").href = document.getElementById("customGame").value;
+}
+
+function loadCustomFlashGame() {
+    document.getElementById("flashGameFrame").src = document.getElementById("customFlashGame").value;
 }
 
 //alert("test");
