@@ -1,8 +1,19 @@
-var juice = document.querySelector('.playback-juice');
+var juice = document.getElementById('playback-juice');
 var btn = document.getElementById('playPause');
 var playImage = document.getElementById('playPauseImage');
 var vid = document.getElementById("videoPlayer");
 var volume = document.getElementById("volumeSlider");
+var progress = document.getElementById("playback-bar")
+
+document.getElementById("fullscreenButton").onclick = function() {
+  if (vid.requestFullscreen) {
+    vid.requestFullscreen();
+  } else if (vid.webkitRequestFullscreen) { /* Safari */
+    vid.webkitRequestFullscreen();
+  } else if (vid.msRequestFullscreen) { /* IE11 */
+    vid.msRequestFullscreen();
+  }
+}
 
 video.addEventListener("change", function() {
   var media = window.URL.createObjectURL(this.files[0]);
@@ -28,6 +39,18 @@ function playPause() {
     vid.pause(); 
   }
 }
+
+progress.addEventListener("click", (e) => {
+  const pos =
+    (e.pageX - progress.offsetParent.offsetParent.offsetLeft) /
+    progress.offsetWidth;
+  console.log(e.pageX);
+  console.log(progress.offsetLeft);
+  console.log(progress.offsetParent.offsetParent.offsetLeft);
+  vid.currentTime = pos * vid.duration;
+  console.log("test");
+});
+
 
 btn.onclick = function() {
   playPause();
