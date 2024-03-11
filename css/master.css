@@ -155,3 +155,41 @@ a:active {
   width: 0;
   background-color: #1E80E8;
 }
+
+.slider {
+  position: absolute;
+  display: inline;
+  margin: auto;
+  margin-top: 11px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 15px;
+  vertical-align: middle;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  border-radius: 0;
+  -webkit-transition: 0s;
+  transition: opacity 0s;
+  align-items: center;
+  justify-content:center
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #1E80E8;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb  {
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+  background: #1E80E8;
+  cursor: pointer;
+}
