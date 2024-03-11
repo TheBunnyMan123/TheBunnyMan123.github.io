@@ -1,46 +1,44 @@
 <!DOCTYPE HTML>
 <html>
-
-<head>
+  <head>
     <title>A:B Injector</title>
-</head>
-
-<body>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
     <noscript>
-        <h1>THIS WEB APP *NEEDS* JAVASCRIPT TO BE ENABLED</h1>
+      <h1>THIS WEB APP *NEEDS* JAVASCRIPT TO BE ENABLED</h1>
     </noscript>
     <p>Welcome to A:B Injector. To start click "Inject".
-        <br><button onClick="run()">Inject</button>
+    <br><button onClick="run()">Inject</button>
     </p>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <p style="font-size:8pt">Sorry, but this needs to be run in a server of some kind</p>
     <script>
-        function run() {
-            let embedLink = window.open();
+      function run() {
+        let embedLink = window.open();
 
-            // Set body in about:blank from local file AB-Injector-innerHTML-body.html
-            fetch("/assets/AB-Injector-innerHTML-body.html")
-                .then(response => response.text())
-                .then(txt => embedLink.document.body.innerHTML = txt);
+        // Set body in about:blank from local file AB-Injector-innerHTML-body.html
+        fetch("/assets/AB-Injector-innerHTML-body.html")
+          .then(response => response.text())
+          .then(txt => embedLink.document.body.innerHTML = txt);
 
-            // Set head in about:blank from local file AB-Injector-innerHTML-head.html
-            fetch("/assets/AB-Injector-innerHTML-head.html")
-                .then(response => response.text())
-                .then(txt => embedLink.document.head.innerHTML = txt);
+        // Set head in about:blank from local file AB-Injector-innerHTML-head.html
+        fetch("/assets/AB-Injector-innerHTML-head.html")
+          .then(response => response.text())
+          .then(txt => embedLink.document.head.innerHTML = txt);
 
-            // Set main script in about:blank from local file AB-Injector-innerHTML-script.js
+        // Set main script in about:blank from local file AB-Injector-innerHTML-script.js
+        var script = embedLink.document.createElement("script");
+        var scriptText;
+
+        fetch("/assets/AB-Injector-innerHTML-script.js")
+          .then(response => response.text())
+          .then(txt => {
             var script = embedLink.document.createElement("script");
-            var scriptText;
-
-            fetch("/assets/AB-Injector-innerHTML-script.js")
-                .then(response => response.text())
-                .then(txt => {
-                    var script = embedLink.document.createElement("script");
-                    script.text = txt;
-                    embedLink.document.body.appendChild(script);
-                });
-        }
+            script.text = txt;
+            embedLink.document.body.appendChild(script);
+          });
+      }
     </script>
-</body>
-
+  </body>
 </html>
