@@ -13,7 +13,7 @@ volume.oninput = function() {
   vid.volume = (this.value / 100);
 }
 
-vid.volume = volume.value;
+vid.volume = volume.value / 100;
 
 function playPause() {
   if (vid.paused) {
