@@ -47,11 +47,7 @@ progress.addEventListener("click", (e) => {
   const pos =
     (e.pageX - progress.offsetParent.offsetLeft) /
     progress.offsetWidth;
-  console.log(e.pageX);
-  console.log(progress.offsetLeft);
-  console.log(progress.offsetParent.offsetLeft);
   vid.currentTime = pos * vid.duration;
-  console.log("test");
 });
 
 
@@ -71,14 +67,14 @@ vid.addEventListener('timeupdate', function() {
 })
 
 var url = window.location;
-console.log(typeof(url.toString()));
 var strurl = url.toString();
 var split = strurl.split("?inputlink=");
+console.log(strurl);
 
 if (split[1]) {
   var src = decodeURIComponent(split[1]);
   console.log("Setting video source to: " + src);
   vid.src = src
 
-  console.log(document.getElementById("generate").remove());
+  document.getElementById("generate").remove();
 }
