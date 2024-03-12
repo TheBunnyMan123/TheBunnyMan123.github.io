@@ -7,7 +7,7 @@ var progress = document.getElementById("playback-bar")
 var fullscreenBtn = document.getElementById("fullscreenButton");
 
 function updateButtonLayout() {
-  fullscreenBtn.style.marginLeft = (window.innerWidth/1 - 75) + "px";
+  fullscreenBtn.style.marginLeft = (window.innerWidth/1 - (volume.offsetWidth * 1.9)) + "px";
 }
 
 window.onresize = updateButtonLayout;

@@ -30,7 +30,7 @@
 
     <div class="vidcontainer">
       <video src="" id="videoPlayer" class="center video_player" style="display: block;" width="400px" height="225px"></video>
-      <div class="vidcontrols">
+      <div class="vidcontrols" style="display: flex;">
         <div id="playback-bar" class="playback-bar">
           <div id="playback-juice" class="playback-juice">
           </div>
@@ -39,8 +39,8 @@
           <button class="play" id="playPause">
             <img id="playPauseImage" src="/assets/images/play.svg"> 
           </button>
-          <input min="0" max="100" class="slider" id="volumeSlider" style="display: inline-block;" type="range"></input>
-          <button style="display: inline-block; margin-left: auto; margin-right: 0; width: 30px; justify-content: flex-end;" id="fullscreenButton">
+          <input min="0" max="100" class="slider" id="volumeSlider" type="range"></input>
+          <button id="fullscreenButton">
             <img id="playPauseImage" src="/assets/images/fullscreen.svg"> 
           </button>
         </div>
