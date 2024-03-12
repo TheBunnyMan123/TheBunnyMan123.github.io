@@ -28,9 +28,13 @@ video {
 
 .buttons {
   padding: 1px;
+  align-content: center;
+  height: 35px;
 }
 
 .buttons button {
+  width: 30px;
+  height: 30px;
   background: none;
   outline: 0;
   border: none;
@@ -67,23 +71,20 @@ video {
 }
 
 .slider {
-  position: absolute;
   display: inline;
-  margin: auto;
-  margin-top: 11px;
+  margin: 0;
+  /*margin-top: 11px;*/
   -webkit-appearance: none;
   appearance: none;
   width: 100px;
   height: 15px;
-  vertical-align: middle;
   background: #d3d3d3;
   outline: none;
   opacity: 1;
   border-radius: 0;
   -webkit-transition: 0s;
   transition: opacity 0s;
-  align-items: center;
-  justify-content:center
+  margin-bottom: 4px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -94,6 +95,8 @@ video {
   background: #1E80E8;
   border-radius: 0;
   cursor: pointer;
+  outline: none;
+  border: 0;
 }
 
 .slider::-moz-range-thumb  {
@@ -102,4 +105,8 @@ video {
   border-radius: 0;
   background: #1E80E8;
   cursor: pointer;
+  outline: none;
+  border: 0;
 }
+
+.slider::-moz-focus-outer { border: 0; }
