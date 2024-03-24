@@ -1,6 +1,10 @@
 var vid = document.getElementById("videoPlayer");
+var video = document.getElemendById("videoFile");
 
-video.addEventListener("change", function() {
+console.log(video);
+
+document.getElementById("videoFile").addEventListener("change", function() {
   var media = window.URL.createObjectURL(this.files[0]);
-  vid.src = media;
+  console.log(media);
+  vid.src = "/videoplayer?inputlink=" + window.encodeURIComponent(media);
 });
