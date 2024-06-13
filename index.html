@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>TheBunnyMan123's Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +16,73 @@
     </div>
     <div class="center" style="width: 640px; height: 400px;">
       <br>
-      <ul>
-        <li><a href="/projects/AB-Injector.html">A:B-Injector</a></li>
-        <li><a href="/projects/speech">Speech Synthesis Text</a></li>
-        <li><a href="/projects/vidplayer">Video Player (currently broken, use embeddable)</a></li>
-        <li><a href="/videoplayer">Embeddable Video Player</a></li>
-      </ul>
+
+      <h2>The beginning of my journey</h2>
+      <p class="dynamic">
+        Hi there! I'm {username} (aka {username-alt}). I have been working on projects for {years} years.
+        My projects have mostly been things that I either could find useful, or things that I have had fun making.
+        I have been the main developer for a group of hobbyists I made for {goofballyears} years called "<a href="https://github.com/Figura-Goofballs/">Figura Goofballs</a>".
+        At the time I thought it was a good name, because the original goal was to make things for the <a href="https://figuramc.org/">Figura</a> minecraft mod.
+        Most of my projects from my first 2-3 years are gone forever. I also have little memory of those projects.
+        In 2024, I remade one of my old (and terrible) discord bots in a more modular way. You can find it <a href="https://github.com/TheBunnyMan123/TheBunnyBot-v2">here</a>. 
+      </p>  
+
+      <h3>Getting into web development</h3>
+      <p class="dynamic">
+        Around {webdevyears} years ago I started getting into web development. I took a class in my final year of middle school, but I had already
+        known most, if not all of what was taught. The web development projects I still have are listed below.
+
+        <ul>
+          <li><a class="dynamic" href="/projects/AB-Injector.html">A:B-Injector ({since-2023} years ago)</a></li>
+          <li><a class="dynamic" href="/projects/speech">Speech Synthesis Text ({since-2023} years ago)</a></li>
+          <li><a class="dynamic" href="/projects/vidplayer">Video Player (currently broken, use embeddable) ({since-2023} years ago)</a></li>
+          <li><a class="dynamic" href="/videoplayer">Embeddable Video Player ({since-2023} years ago)</a></li>
+        </ul>
+      </p>
+
+      <h3>Developing Mods for Minecraft</h3>
+      <p class="dynamic">
+        Around {webdevyears} years ago I started with developing mods for the game "Minecraft". These mods are coded in java.
+        My first mod was a re-creation of the mod 'WorldEdit' that internally used Vanilla commands,
+        allowing it to be used on any server you had permission. My second mod was made with the
+        "<a href="https://github.com/Figura-Goofballs/">Figura Goofballs</a>" group, and it was called "GoofyPlugin". It is a plugin for the for the <a href="https://figuramc.org/">Figura</a> mod
+        that adds many useful things that wouldn't normally be added. All of my minecraft mods are listed below.
+
+        <ul>
+          <li><a class="dynamic" href="https://github.com/TheBunnyMan123/WorldBender">WorldBender</a></li>
+          <li><a class="dynamic" href="https://github.com/Figura-Goofballs/GoofyPlugin">GoofyPlugin</a></li>
+        </ul>
+      </p>
+
+      <h3>Lua Shenanigans</h3>
+      <p class="dynamic">
+        Many of my coding projects are made Lua, an easily embeddable programing language. Some of my first things were made on
+        "Roblox", which uses lua. {webdevyears} years ago, I discovered the "Figura" mod for the first time, and immediatly started
+        making an avatar. A year later, I created a custom OS for the "ComputerCraft" mod for Minecraft (specifically the CC: Tweaked fork) called "GoofballOS" with the "<a href="https://github.com/Figura-Goofballs/">Figura Goofballs</a>" group.
+        This OS was almost fully backwards compatible with the built-in OS at the time.
+
+        <ul>
+          <li><a class="dynamic" href="https://github.com/TheBunnyMan123/Small-Bunny-Avatar">Figura Avatar</a></li>
+          <li><a class="dynamic" href="https://github.com/Figura-Goofballs/GoofballOS">GoofballOS</a></li>
+        </ul>
+      </p>
     </div>
+
+    <script>
+      var paragraphs = document.getElementsByClassName('dynamic')
+
+      for (i = 0; i < paragraphs.length; i++) {
+        var paragraph = paragraphs[i]
+        var paragraphText = paragraph.innerHTML
+
+        paragraph.innerHTML = paragraphText
+            .replace('{years}', new Date().getFullYear() - 2018)
+            .replace('{goofballyears}', new Date().getFullYear() - 2024)
+            .replace('{webdevyears}', new Date().getFullYear() - 2021)
+            .replace('{since-2023}', new Date().getFullYear() - 2023)
+            .replace('{username}', 'TheKillerBunny')
+            .replace('{username-alt}', 'TheBunnyMan123')
+      }
+    </script>
   </body>
 </html> 
