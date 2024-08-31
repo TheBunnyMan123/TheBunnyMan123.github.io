@@ -4,12 +4,21 @@ import React from "react";
 import Head from 'next/head'
 
 export default function Home() {
+  async function videoPlayerSubmit(event: FormEvent<HTMLFormEvent>) {
+    event.preventDefault();
+
+    let videoURL = document.getElementById("videoURL").value;
+    let videoURLEncoded = encodeURIComponent(videoURL);
+
+    location = "/videoplayer?video=" + videoURLEncoded;
+  }
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="macchiato bg-base display-fixed w-screen h-screen p-3 text-text">
+      <div className="display-fixed w-screen h-full p-3 text-text">
         <h1 className="text-4xl font-bold text-center">
           TheKillerBunny&apos;s Website
         </h1>
@@ -86,6 +95,12 @@ export default function Home() {
             </p>
           </div>
         </div>
+        
+        <form onSubmit={videoPlayerSubmit}>
+          <label for="videoURL">Video Player URL:&nbsp;&nbsp;</label>
+          <input type="text" id="videoURL" className="text-base" />
+          <input type="Submit" value="Load" className="rounded-md border border-mauve bg-surface0 ml-3 p-1" />
+        </form>
       </div>
     </>
   );

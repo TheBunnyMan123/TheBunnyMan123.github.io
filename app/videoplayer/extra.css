@@ -1,0 +1,15 @@
+#controls {
+  background-color: rgb(0, 0, 0, 0.75) !important;
+}
+
+#container {
+  background: #000000;
+}
+
+#buttons {
+  opacity: 0;
+}
+#container:hover #controls #buttons {
+  opacity: 1;
+}
+

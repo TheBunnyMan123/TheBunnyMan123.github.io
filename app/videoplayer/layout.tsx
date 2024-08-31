@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import "./extra.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TKBunny's Site",
+  title: "TKBunny's Video Player",
   description: "TheKillerBunny's Website",
 };
 
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="macchiato bg-base">{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
