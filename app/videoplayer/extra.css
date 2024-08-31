@@ -6,10 +6,10 @@
   background: #000000;
 }
 
-#buttons {
+#controls {
   opacity: 0;
 }
-#container:hover #controls #buttons {
+#container:hover #controls {
   opacity: 1;
 }
 

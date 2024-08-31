@@ -47,16 +47,43 @@ export default function Player() {
     }
   }
 
+  async function videoTimeUpdate() {
+    let video = document.getElementById("player") as HTMLMediaElement;
+    let juice = document.getElementById("juice")
+    if (video == null || juice == null) {
+      return;
+    }
+
+    let juicePos = video.currentTime / video.duration;
+    juice.style.width = (juicePos * 100) + "%";
+  }
+
+  async function updateTime(event: React.MouseEvent<HTMLDivElement>) {
+    let progress = document.getElementById("progress")
+    let video = document.getElementById("player") as HTMLMediaElement
+    let juice = document.getElementById("juice")
+    if (progress == null || video == null || juice == null) {
+      return;
+    }
+
+    const pos = event.pageX / progress.offsetWidth;
+    video.currentTime = pos * video.duration;
+    juice.style.width = (pos * 100) + "%";
+  }
+
   return (
     <>
-      <div id="container" className="h-full overflow-hidden bg-crust fixed" >
-        <video onEnded={playPause} id="player" src={videoUrl} className="h-full" />
-        <div id="controls" className="flex absolute bottom-0 w-full flex-wrap ">
-          <div id="buttons" className="-translate-y-12 transition-all bg-mantle w-full">
+      <div id="container" className="h-full w-full overflow-hidden bg-crust fixed" >
+        <video onTimeUpdate={videoTimeUpdate} onEnded={playPause} id="player" src={videoUrl} className="h-full w-full" />
+        <div id="controls" className="flex absolute bottom-0 transition-all w-full flex-wrap ">
+          <div id="progress" onClick={updateTime} className="left-0 bottom-0 w-full h-3 bg-crust">
+            <div id="juice" className="left-0 h-full bg-mauve" />
+          </div>
+          <div id="buttons" className="bottom-16 fixed bg-mantle">
             <button onClick={playPause} id="play" className="left-2 fixed">
               <Image src="/play.svg" alt="play" width={45} height={45} />
             </button>
-            <button onClick={fullscreen} id="fullscreen" className="right-2 fixed">
+            <button onClick={fullscreen} id="fullscreen" className="right-3 fixed">
               <Image src="/fullscreen.svg"alt="fullscreen" width={45} height={45} />
             </button>
           </div>
