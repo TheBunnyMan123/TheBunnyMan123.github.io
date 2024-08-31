@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .grid-1-div {
-  @apply border-mauve border rounded-lg p-3;
+  @apply border-mauve border rounded-lg p-3 bg-mantle;
 }
 .grid-1-h2 {
   @apply text-3xl font-bold text-center;

@@ -1,10 +1,14 @@
 'use client'
 import Image from "next/image";
 import React from "react";
+import Head from 'next/head'
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <div className="macchiato bg-base display-fixed w-screen h-screen p-3 text-text">
         <h1 className="text-4xl font-bold text-center">
           TheKillerBunny&apos;s Website
@@ -15,7 +19,7 @@ export default function Home() {
         
         <hr className="hr-primary mx-10" />
 
-        <div className="grid grid-cols-3 gap-4 p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10">
           <div className="grid-1-div">
             <h2 className="grid-1-h2">
               The Roblox Era
@@ -40,7 +44,7 @@ export default function Home() {
             </h2>
             <hr className="hr-primary" />
             <p>
-              In 2024 I started a group of hobbyists called &quot;Figura Goofballs&quot;. At first we thought we would only do stuff related to Figura, but we quickly expanded to Lua in general.
+              In 2024 I started a group of hobbyists called &quot;Figura Goofballs&quot;. At first we thought we would only do stuff related to Figura, but we quickly expanded to programming in general.
 
               <br /><br />
               Projects:
@@ -53,6 +57,33 @@ export default function Home() {
                 <a href="https://github.com/Figura-Goofballs/GoofballOS">GoofballOS for ComputerCraft: Tweaked</a>
               </li>
             </ul>
+          </div>
+          <div className="grid-1-div">
+            <h2 className="grid-1-h2">
+              Starting Java
+            </h2>
+            <hr className="hr-primary" />
+            <p>
+              A little after I started developing I got into Java. This would prove to be a useful skill for when I got into modding the game &quot;Minecraft&quot;. Until developing Minecraft mods, I never really made anything worthwhile in Java, so all of the projects are lost to time.
+            </p>
+          </div>
+          <div className="grid-1-div">
+            <h2 className="grid-1-h2">
+              Modding Minecraft
+            </h2>
+            <hr className="hr-primary" />
+            <p>
+              In 2023, I started making mods for the game &quot;Minecraft&quot;. My first mod was a clone of &quot;WorldEdit&quot; designed to work completely on the client by sending commands to the server called <a href="https://github.com/TheBunnyMan123/WorldBender">&quot;WorldBender&quot;</a>. This is a mod I used for a bit, but later stopped using it due to me always having &wuot;WorldEdit&quot; available. My second mod was made with the other &quot;Figura Goofballs&quot;, and it is an addon for the &quot;Figura&quot; mod that adds various Lua functions based on what people want and what we feel like adding. This mod is called <a href="https://github.com/Figura-Goofballs/GoofyPlugin/">GoofyPlugin</a>.
+            </p>
+          </div>
+          <div className="grid-1-div">
+            <h2 className="grid-1-h2">
+              Starting C#
+            </h2>
+            <hr className="hr-primary" />
+            <p>
+              A year or two after I started Java, I got into C#. I would make various trinkets with it, but none of those would stand the test of time. My finished projects include a <a href="https://codeberg.org/TheBunnyMan123/Calculator">calculator</a> and a <a href="https://codeberg.org/TheBunnyMan123/Timer">timer</a>.
+            </p>
           </div>
         </div>
       </div>
