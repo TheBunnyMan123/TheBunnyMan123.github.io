@@ -6,13 +6,22 @@ import { useSearchParams } from 'next/navigation'
 
 export default function Player() {
   let searchParams = useSearchParams();
-  let videoUrl = searchParams.get('video');
+  let videoUrl = searchParams.get('video') ?? "";
   let paused = true;
 
   async function playPause() {
     let playButton = document.getElementById('play');
+    if (playButton == null) {
+      return;
+    }
     let img = playButton.querySelector('img')
-    let video = document.getElementById("player");
+    if (img == null) {
+      return;
+    }
+    let video = document.getElementById("player") as HTMLMediaElement;
+    if (video == null) {
+      return;
+    }
 
     paused = !paused
 
@@ -27,6 +36,9 @@ export default function Player() {
 
   async function fullscreen() {
     let container = document.getElementById("container");
+    if (container == null) {
+      return;
+    }
 
     if (document.fullscreen) {
       document.exitFullscreen();
@@ -37,8 +49,8 @@ export default function Player() {
 
   return (
     <>
-      <div id="container" className="w-full overflow-hidden bg-crust fixed" >
-        <video onEnded={playPause} id="player" src={videoUrl} className="w-full" />
+      <div id="container" className="h-full overflow-hidden bg-crust fixed" >
+        <video onEnded={playPause} id="player" src={videoUrl} className="h-full" />
         <div id="controls" className="flex absolute bottom-0 w-full flex-wrap ">
           <div id="buttons" className="-translate-y-12 transition-all bg-mantle w-full">
             <button onClick={playPause} id="play" className="left-2 fixed">

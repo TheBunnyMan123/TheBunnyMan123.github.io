@@ -4,13 +4,16 @@ import React from "react";
 import Head from 'next/head'
 
 export default function Home() {
-  async function videoPlayerSubmit(event: FormEvent<HTMLFormEvent>) {
+  async function videoPlayerSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    let videoURL = document.getElementById("videoURL").value;
-    let videoURLEncoded = encodeURIComponent(videoURL);
+    let videoURL = (document.getElementById("videoURL") as HTMLInputElement);
+    if (videoURL != null) {
+      let url = videoURL.value;
+      let videoURLEncoded = encodeURIComponent(url);
 
-    location = "/videoplayer?video=" + videoURLEncoded;
+      window.location.href = "/videoplayer?video=" + videoURLEncoded;
+    }
   }
 
   return (
@@ -58,7 +61,7 @@ export default function Home() {
               <br /><br />
               Projects:
             </p>
-            <ul class="list-disc pl-5">
+            <ul className="list-disc pl-5">
               <li>
                 <a href="https://github.com/Figura-Goofballs/GoofyPlugin">GoofyPlugin for Figura</a>
               </li>
@@ -97,7 +100,7 @@ export default function Home() {
         </div>
         
         <form onSubmit={videoPlayerSubmit}>
-          <label for="videoURL">Video Player URL:&nbsp;&nbsp;</label>
+          <label htmlFor="videoURL">Video Player URL:&nbsp;&nbsp;</label>
           <input type="text" id="videoURL" className="text-base" />
           <input type="Submit" value="Load" className="rounded-md border border-mauve bg-surface0 ml-3 p-1" />
         </form>
