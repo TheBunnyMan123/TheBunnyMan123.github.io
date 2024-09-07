@@ -98,6 +98,12 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <a href="/skulldocs">
+          <p>
+            Skull Docs
+          </p>
+        </a>
         
         <form onSubmit={videoPlayerSubmit}>
           <label htmlFor="videoURL">Video Player URL:&nbsp;&nbsp;</label>
