@@ -56,7 +56,7 @@ export default function Home() {
           Plushie
         </h2>
         <p>
-          To get a plushie set the texture to &quot;plush&quot; or &quot;plushie&quot;
+          To get a plushie set the texture to &quot;plush&quot;
         </p>
       </div>
     </>
