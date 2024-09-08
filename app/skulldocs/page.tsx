@@ -51,6 +51,13 @@ export default function Home() {
         <p>
           To get a head that will play an ogg (vorbis), set my skull&quot;s texture to &quot;jukebox;[OGG FILE (BASE64 ENCODED)]&quot;
         </p>
+
+        <h2 className="text-2xl font-bold">
+          Plushie
+        </h2>
+        <p>
+          To get a plushie set the texture to &quot;plush&quot; or &quot;plushie&quot;
+        </p>
       </div>
     </>
   );
