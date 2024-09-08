@@ -27,7 +27,7 @@ export default function Home() {
         </h1>
 
         <p className="text-center">
-          To prevent log spam, wrap all textures in &quot;{`{"textures":{"SKIN":{"url":"http://example.com/§§[TEXTURE]§§"}}}`}&quot;
+          To prevent errors, base64 encode the texture twice instead of the normal once
         </p>
         
         <hr className="hr-primary mx-10" />
