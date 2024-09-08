@@ -28,6 +28,8 @@ export default function Home() {
 
         <p className="text-center">
           To prevent errors, base64 encode the texture twice instead of the normal once
+          <br />
+          All my skulls, if the block below them has a power property of greater than 0, will uncache and not run any functions
         </p>
         
         <hr className="hr-primary mx-10" />
@@ -44,7 +46,7 @@ export default function Home() {
         <br />
           
         <h2 className="text-2xl font-bold">
-          OGG Jukebox
+          OGG Jukebox (don&apos;t double encode)
         </h2>
         <p>
           To get a head that will play an ogg (vorbis), set my skull&quot;s texture to &quot;jukebox;[OGG FILE (BASE64 ENCODED)]&quot;
