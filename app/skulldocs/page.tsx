@@ -58,6 +58,13 @@ export default function Home() {
         <p>
           To get a plushie set the texture to &quot;plush&quot;
         </p>
+
+        <h2 className="text-2xl font-bold">
+          NBT Data
+        </h2>
+        <p>
+          If you set my skull&apos;s texture to &quot;properties&quot; it will display NBT data of the below head. A couple blocks format the NBT data into a human readable format.
+        </p>
       </div>
     </>
   );
