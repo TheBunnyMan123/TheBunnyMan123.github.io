@@ -104,6 +104,11 @@ export default function Home() {
             Skull Docs
           </p>
         </a>
+        <a href="/gallifreyan">
+          <p>
+            Gallifreyan Text
+          </p>
+        </a>
         
         <form onSubmit={videoPlayerSubmit}>
           <label htmlFor="videoURL">Video Player URL:&nbsp;&nbsp;</label>
