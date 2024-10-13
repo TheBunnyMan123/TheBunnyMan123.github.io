@@ -25,7 +25,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center">
           Sherman&apos;s Gallifreyan Images
         </h1>
-        <p class="text-center">
+        <p className="text-center">
           All images licensed under CC-BY
         </p>
 
@@ -34,19 +34,19 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10">
           <div className="grid-1-div">
             <img src="https://codeberg.org/TheBunnyMan123/Gallifreyan/raw/branch/master/OpticalMediaIsPeak.svg" style="background-color: white; width: 100%;" alt="Optical Media is Peak in Sherman's Gallifreyan" />
-            <p>
+            <p className="text-center">
               Optical Media is Peak
             </p>
           </div>
           <div className="grid-1-div">
             <img src="https://codeberg.org/TheBunnyMan123/Gallifreyan/raw/branch/master/TheKillerBunny.svg" style="background-color: white; width: 100%;" alt="Optical Media is Peak in Sherman's Gallifreyan" />
-            <p>
+            <p className="text-center">
               TheKillerBunny
             </p>
           </div>
           <div className="grid-1-div">
             <img src="https://codeberg.org/TheBunnyMan123/Gallifreyan/raw/branch/master/Tick%2C Tock%2C Goes the Clock.svg" style="background-color: white; width: 100%;" alt="Optical Media is Peak in Sherman's Gallifreyan" />
-            <p>
+            <p className="text-center">
               Tick, Tock, Goes the Clock
             </p>
           </div>
