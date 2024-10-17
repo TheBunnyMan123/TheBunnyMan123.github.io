@@ -4,18 +4,6 @@ import React from "react";
 import Head from 'next/head'
 
 export default function Home() {
-  async function videoPlayerSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    let videoURL = (document.getElementById("videoURL") as HTMLInputElement);
-    if (videoURL != null) {
-      let url = videoURL.value;
-      let videoURLEncoded = encodeURIComponent(url);
-
-      window.location.href = "/videoplayer?video=" + videoURLEncoded;
-    }
-  }
-
   return (
     <>
       <Head>
@@ -26,9 +14,9 @@ export default function Home() {
           Sherman&apos;s Gallifreyan Images
         </h1>
         <p className="text-center">
-          All images licensed under CC-BY
+          These images are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>
         </p>
-
+        
         <hr className="hr-primary mx-10" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10">
@@ -37,7 +25,7 @@ export default function Home() {
               src="/assets/OpticalMediaIsPeak.svg"
               width={500}
               height={500}
-              className="width-fit rounded-full bg-white"
+              className="mx-auto width-fit rounded-full bg-white"
               alt="Optical Media is Peak in Sherman's Gallifreyan"
             />
             <p className="text-center">
@@ -49,7 +37,7 @@ export default function Home() {
               src="/assets/TheKillerBunny.svg"
               width={500}
               height={500}
-              className="width-fit rounded-full bg-white"
+              className="mx-auto width-fit rounded-full bg-white"
               alt="Optical Media is Peak in Sherman's Gallifreyan"
             />
             <p className="text-center">
@@ -61,7 +49,7 @@ export default function Home() {
               src="/assets/Tick%2C Tock%2C Goes the Clock.svg"
               width={500}
               height={500}
-              className="width-fit rounded-full bg-white"
+              className="mx-auto width-fit rounded-full bg-white"
               alt="Optical Media is Peak in Sherman's Gallifreyan"
             />
             <p className="text-center">
