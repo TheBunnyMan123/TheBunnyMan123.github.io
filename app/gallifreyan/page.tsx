@@ -25,7 +25,7 @@ export default function Home() {
               src="/assets/OpticalMediaIsPeak.svg"
               width={500}
               height={500}
-              className="mx-auto width-fit rounded-full bg-white"
+              className="mt-4 mx-auto width-fit rounded-full bg-white"
               alt="Optical Media is Peak in Sherman's Gallifreyan"
             />
             <p className="text-center">
@@ -37,7 +37,7 @@ export default function Home() {
               src="/assets/TheKillerBunny.svg"
               width={500}
               height={500}
-              className="mx-auto width-fit rounded-full bg-white"
+              className="mt-4 mx-auto width-fit rounded-full bg-white"
               alt="Optical Media is Peak in Sherman's Gallifreyan"
             />
             <p className="text-center">
@@ -49,7 +49,7 @@ export default function Home() {
               src="/assets/Tick%2C Tock%2C Goes the Clock.svg"
               width={500}
               height={500}
-              className="mx-auto width-fit rounded-full bg-white"
+              className="mt-4 mx-auto width-fit rounded-full bg-white"
               alt="Optical Media is Peak in Sherman's Gallifreyan"
             />
             <p className="text-center">
