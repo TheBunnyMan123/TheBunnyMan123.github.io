@@ -56,6 +56,18 @@ export default function Home() {
               Tick, Tock, Goes the Clock
             </p>
           </div>
+          <div className="grid-1-div">
+            <Image 
+              src="/assets/DemonsRunPoem.svg"
+              width={500}
+              height={600}
+              className="width-fit rounded-3xl bg-white"
+              alt="Demons Run poem in Sherman's Gallifreyan"
+            />
+            <p className="text-center">
+              Demons Run poem
+            </p>
+          </div>
         </div>
       </div>
     </>
