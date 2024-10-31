@@ -26,7 +26,7 @@ export default function Home() {
           TheKillerBunny&apos;s Website
         </h1>
         <h3 className="text-2xl font-medium text-center">
-          A passionate developer from Texas that started in 2017!
+          Welcome to my corner of the internet!
         </h3>
         
         <hr className="hr-primary mx-10" />
