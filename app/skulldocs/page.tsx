@@ -25,45 +25,16 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center">
           TheKillerBunny&apos;s Figura Avatar Skull Documentation
         </h1>
-
-        <p className="text-center">
-          To prevent errors, base64 encode the texture twice instead of the normal once
-          <br />
-          All my skulls, if the block below them has a power property of greater than 0, will uncache and not run any functions
+        <p>
+          The modifier block is the block the skull is sitting on top of.
+          Placing a sign on the side of the block the skull is facing can modify it&apos;s behavior.
         </p>
-        
-        <hr className="hr-primary mx-10" />
         <br />
-
         <h2 className="text-2xl font-bold">
-          Mini Blocks
+          Block/Item Display
         </h2>
         <p>
-          To get a mini block, just set my skull&quot;s texture to &quot;mini_block;[BLOCKSTATE STRING]&quot;<br />
-          The blockstate string is what you would use in /setblock
-        </p>
-    
-        <br />
-          
-        <h2 className="text-2xl font-bold">
-          OGG Jukebox (don&apos;t double encode)
-        </h2>
-        <p>
-          To get a head that will play an ogg (vorbis), set my skull&quot;s texture to &quot;jukebox;[OGG FILE (BASE64 ENCODED)]&quot;
-        </p>
-
-        <h2 className="text-2xl font-bold">
-          Plushie
-        </h2>
-        <p>
-          To get a plushie set the texture to &quot;plush&quot;
-        </p>
-
-        <h2 className="text-2xl font-bold">
-          NBT Data
-        </h2>
-        <p>
-          If you set my skull&apos;s texture to &quot;properties&quot; it will display NBT data of the below head. A couple blocks format the NBT data into a human readable format.
+          Placing my skull on an oak log, and typing HELP into the sign will give you the sign data layout
         </p>
       </div>
     </>
