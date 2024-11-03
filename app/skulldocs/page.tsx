@@ -36,6 +36,13 @@ export default function Home() {
         <p>
           Placing my skull on an oak log, and typing HELP into the sign will give you the sign data layout
         </p>
+        <br />
+        <h2 className="text-2xl font-bold">
+          Brainfuck Interpreter
+        </h2>
+        <p>
+          Placing my skull on a dead brain coral block will interpret the sign data as brainfuck and display the output
+        </p>
       </div>
     </>
   );
