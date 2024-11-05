@@ -27,7 +27,7 @@ export default function Home() {
         </h1>
         <p>
           The modifier block is the block the skull is sitting on top of.
-          Placing a sign on the side of the block the skull is facing can modify it&apos;s behavior. Signs are stackable.
+          Placing a sign on the side of the block the skull is facing can modify it&apos;s behavior. Signs are stackable, and you can also put signs on the back side for some modes.
         </p>
         <br />
         <h2 className="text-2xl font-bold">
@@ -41,7 +41,7 @@ export default function Home() {
           Brainfuck Interpreter
         </h2>
         <p>
-          Placing my skull on a dead brain coral block will interpret the sign data as brainfuck and display the output
+          Placing my skull on a dead brain coral block will interpret the sign data as brainfuck and display the output. The back signs are used for the input.
         </p>
       </div>
     </>
