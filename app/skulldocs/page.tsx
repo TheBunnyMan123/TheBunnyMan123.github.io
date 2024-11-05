@@ -34,6 +34,13 @@ export default function Home() {
           Block/Item Display
         </h2>
         <p>
+          Placing my skull on a bamboo block will display the text on the sign. <br />Typing HELP into the back sign will give you the display options layout.
+        </p>
+        <br />
+        <h2 className="text-2xl font-bold">
+          Block/Item Display
+        </h2>
+        <p>
           Placing my skull on an oak log, and typing HELP into the sign will give you the sign data layout
         </p>
         <br />
