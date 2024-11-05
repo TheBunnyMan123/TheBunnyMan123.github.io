@@ -27,7 +27,7 @@ export default function Home() {
         </h1>
         <p>
           The modifier block is the block the skull is sitting on top of.
-          Placing a sign on the side of the block the skull is facing can modify it&apos;s behavior.
+          Placing a sign on the side of the block the skull is facing can modify it&apos;s behavior. Signs are stackable.
         </p>
         <br />
         <h2 className="text-2xl font-bold">
