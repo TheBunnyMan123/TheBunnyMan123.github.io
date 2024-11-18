@@ -50,6 +50,15 @@ export default function Home() {
         <p>
           Placing my skull on a dead brain coral block will interpret the sign data as brainfuck and display the output. The back signs are used for the input.
         </p>
+        <br />
+        <h2 className="text-2xl font-bold">
+          Piano Player
+        </h2>
+        <p>
+          On top of a loom and with a <a href="https://github.com/ChloeSpacedOut/figura-piano/">piano</a> 2 blocks above, it will play a song using the sign data as follows:
+
+          B1;B2;B3,B4
+        </p>
       </div>
     </>
   );
