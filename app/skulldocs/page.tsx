@@ -55,7 +55,7 @@ export default function Home() {
           Piano Player
         </h2>
         <p>
-          On top of a loom and with a <a href="https://github.com/ChloeSpacedOut/figura-piano/">piano</a> 2 blocks above, it will play a song using the sign data as follows:
+          On top of a loom and with a <a href="https://github.com/ChloeSpacedOut/figura-piano/">piano</a> 3 blocks above, it will play a song using the sign data as follows:
 
           B1;B2;B3,B4
         </p>
